@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bakery Design System - Warm, elegant colors for a custom cake bakery */
+
+@layer base {
+  :root {
+    /* Base colors - warm cream and soft neutrals */
+    --background: 20 20% 98%;
+    --foreground: 25 25% 15%;
+
+    /* Card colors */
+    --card: 0 0% 100%;
+    --card-foreground: 25 25% 15%;
+
+    /* Popover colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 25% 15%;
+
+    /* Primary - elegant rose gold */
+    --primary: 345 50% 65%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Primary variants for gradients */
+    --primary-light: 345 70% 85%;
+    --primary-dark: 345 40% 45%;
+
+    /* Secondary - warm cream */
+    --secondary: 35 30% 92%;
+    --secondary-foreground: 25 25% 15%;
+
+    /* Muted colors */
+    --muted: 35 20% 95%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Accent - golden honey */
+    --accent: 45 85% 70%;
+    --accent-foreground: 25 25% 15%;
+
+    /* Destructive colors */
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border and input colors */
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 345 50% 65%;
+    
+    /* Custom bakery colors */
+    --cake-pink: 330 60% 85%;
+    --cake-cream: 40 40% 95%;
+    --cake-gold: 45 85% 70%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--primary)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--cake-cream)));
+    --gradient-accent: linear-gradient(45deg, hsl(var(--accent)), hsl(var(--cake-gold)));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 8px 30px hsl(var(--primary) / 0.08);
+    --shadow-hero: 0 20px 60px hsl(var(--primary) / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with warm tones */
+    --background: 25 15% 8%;
+    --foreground: 35 30% 92%;
+
+    --card: 25 15% 10%;
+    --card-foreground: 35 30% 92%;
+
+    --popover: 25 15% 10%;
+    --popover-foreground: 35 30% 92%;
+
+    --primary: 345 60% 70%;
+    --primary-foreground: 25 15% 8%;
+    
+    --primary-light: 345 70% 80%;
+    --primary-dark: 345 50% 50%;
+
+    --secondary: 25 20% 15%;
+    --secondary-foreground: 35 30% 92%;
+
+    --muted: 25 15% 12%;
+    --muted-foreground: 35 20% 65%;
+
+    --accent: 45 80% 65%;
+    --accent-foreground: 25 15% 8%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 35 30% 92%;
+
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 345 60% 70%;
+    
+    --cake-pink: 330 50% 70%;
+    --cake-cream: 40 30% 85%;
+    --cake-gold: 45 80% 65%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--card)));
+    --gradient-accent: linear-gradient(45deg, hsl(var(--accent)), hsl(var(--cake-gold)));
+    
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 8px 30px hsl(0 0% 0% / 0.25);
+    --shadow-hero: 0 20px 60px hsl(0 0% 0% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
